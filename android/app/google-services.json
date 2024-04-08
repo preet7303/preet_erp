@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "283315456217",
+    "project_id": "preet--s-erp",
+    "storage_bucket": "preet--s-erp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283315456217:android:47e6a7e0c3b86639e816c8",
+        "android_client_info": {
+          "package_name": "com.example.preet_erp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf2aTUpeKbZ4GE8sW-swAcF04RaEps3xI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
