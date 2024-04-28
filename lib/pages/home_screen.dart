@@ -3,6 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:preet_erp/pages/Attendance/view/attendance.dart';
+import 'package:preet_erp/pages/Fees/View/fees.dart';
+import 'package:preet_erp/pages/event_page/View/Event.dart';
 import 'package:preet_erp/pages/settings.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,8 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     List<String> Images = [
       "assets/images/college_photo.jpeg",
-          "assets/images/college_photo2.jpeg",
-          "assets/images/svvv_group.JPG",
+      "assets/images/college_photo2.jpeg",
+      "assets/images/svvv_group.JPG",
     ];
     return SafeArea(
       child: Scaffold(
@@ -58,7 +61,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: CircleAvatar(
                           radius: 25,
                           backgroundColor: Color(0xff6776F9),
-                          child: Image.asset("assets/images/Student_avatar.png")),
+                          child:
+                              Image.asset("assets/images/Student_avatar.png")),
                     ),
                   )
                 ],
@@ -89,7 +93,8 @@ class _HomeScreenState extends State<HomeScreen> {
               // ),
               CarouselSlider.builder(
                   itemCount: 2,
-                  itemBuilder: (BuildContext context, int index, int itemIndex) {
+                  itemBuilder:
+                      (BuildContext context, int index, int itemIndex) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: ClipRRect(
@@ -104,11 +109,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                   options: CarouselOptions(
-                    enableInfiniteScroll: true,
-                    viewportFraction: 0.9,
-                    autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 2 )
-                  )),
+                      enableInfiniteScroll: true,
+                      viewportFraction: 0.9,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 2))),
               Container(
                 width: MediaQuery.sizeOf(context).width / 1.05,
                 height: MediaQuery.sizeOf(context).height / 2,
@@ -130,9 +134,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     backgroundColor: Color(0xff6776F9)),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (_) => EventPage()));
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -163,7 +173,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                             borderRadius:
                                                 BorderRadius.circular(10)),
                                         backgroundColor: Color(0xff6776F9)),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (_) =>
+                                                  AttendancePage()));
+                                    },
                                     child: Image.asset(
                                       "assets/images/attendance_blue.png",
                                       width: 60,
@@ -213,7 +229,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     backgroundColor: Color(0xff6776F9)),
                                 onPressed: () {},
                                 child: Image.asset(
@@ -230,9 +247,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     backgroundColor: Color(0xff6776F9)),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (_) => FeesDetail()));
+                                },
                                 child: Image.asset(
                                   "assets/images/fees_blue.png",
                                   width: 100,
@@ -247,7 +270,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     backgroundColor: Color(0xff6776F9)),
                                 onPressed: () {},
                                 child: Image.asset(
