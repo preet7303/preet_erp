@@ -128,7 +128,7 @@ class _HomeScreenState extends State<LoginPage> {
                               borderRadius: BorderRadius.circular(25)),
                           minimumSize:
                               Size(MediaQuery.sizeOf(context).width / 1.1, 50),
-                        ),
+                        ) ,
                         onPressed: () async {
                           await box1
                               .add(

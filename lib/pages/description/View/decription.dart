@@ -1,17 +1,34 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
+
+
 class EventDescription extends StatefulWidget {
   final String AboutEvent;
-  const EventDescription({super.key, required this.AboutEvent});
+  final String img;
+  const EventDescription({super.key, required this.AboutEvent, required this.img});
+
+ 
 
   @override
   State<EventDescription> createState() => _EventDescriptionState();
+
 }
 
+
+
+
 class _EventDescriptionState extends State<EventDescription> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
@@ -37,10 +54,13 @@ class _EventDescriptionState extends State<EventDescription> {
                             fontWeight: FontWeight.w500))
                   ],
                 ),
+
                 Container(
-                    width: MediaQuery.sizeOf(context).width,
-                    height: MediaQuery.sizeOf(context).height / 2.5,
-                    child: Image.asset("assets/images/ambriti.jpg")),
+                        width: MediaQuery.sizeOf(context).width,
+                        height: MediaQuery.sizeOf(context).height / 2.5,
+                  child: Image.network(widget.img)
+                        ),
+
                 Container(
                     width: MediaQuery.sizeOf(context).width,
                     height: MediaQuery.sizeOf(context).height / 2,
